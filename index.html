@@ -1,9 +1,105 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
   <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>My Bible App</title>
-  <link rel="stylesheet" href="style.css">
+  <style>
+    /* Modern CSS Reset & Variables */
+    :root {
+      --primary-color: #5d4037;
+      --accent-color: #8d6e63;
+      --bg-color: #fdfaf6;
+      --text-color: #2c2c2c;
+      --card-bg: #ffffff;
+      --shadow: 0 10px 25px rgba(0, 0, 0, 0.05);
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+      background-color: var(--bg-color);
+      color: var(--text-color);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+      line-height: 1.6;
+    }
+
+    /* Container Styling */
+    .container {
+      background-color: var(--card-bg);
+      padding: 3rem 2rem;
+      border-radius: 20px;
+      box-shadow: var(--shadow);
+      text-align: center;
+      max-width: 450px;
+      width: 90%;
+      border: 1px solid rgba(0, 0, 0, 0.03);
+    }
+
+    h1 {
+      font-size: 2rem;
+      color: var(--primary-color);
+      margin-bottom: 1rem;
+      font-weight: 700;
+      letter-spacing: -0.5px;
+    }
+
+    p {
+      color: #666;
+      margin-bottom: 2.5rem;
+      font-size: 1.1rem;
+    }
+
+    /* Button Styling */
+    .btn {
+      display: inline-block;
+      background-color: var(--primary-color);
+      color: #ffffff;
+      padding: 1rem 2.5rem;
+      text-decoration: none;
+      border-radius: 50px;
+      font-weight: 600;
+      font-size: 1rem;
+      transition: all 0.3s ease;
+      box-shadow: 0 4px 15px rgba(93, 64, 55, 0.3);
+    }
+
+    .btn:hover {
+      background-color: var(--accent-color);
+      transform: translateY(-2px);
+      box-shadow: 0 6px 20px rgba(93, 64, 55, 0.4);
+    }
+
+    .btn:active {
+      transform: translateY(0);
+    }
+
+    /* Decorative element */
+    .container::before {
+      content: "📖";
+      display: block;
+      font-size: 3rem;
+      margin-bottom: 1rem;
+    }
+
+    /* Responsive adjustments */
+    @media (max-width: 480px) {
+      .container {
+        padding: 2.5rem 1.5rem;
+      }
+      h1 {
+        font-size: 1.75rem;
+      }
+    }
+  </style>
 </head>
 <body>
 
@@ -18,3 +114,4 @@
 
 </body>
 </html>
+
